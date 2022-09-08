@@ -58,7 +58,6 @@ function buildNav() {
     link.classList.add("menu__link");
   });
 }
-document.addEventListener("DOMContentLoaded", buildNav);
 
 // Add class 'active' to section when near top of viewport
 
@@ -71,6 +70,20 @@ document.addEventListener("DOMContentLoaded", buildNav);
  */
 
 // Build menu
+// Set sections as active
+function setActive() {
+  sections.forEach((section) => {
+    const move = section.getBoundingClientRect();
+    const activeLink = navList.querySelector(`[data-nav=${section.id}]`);
+    if (move.top <= 150 && move.bottom >= 150) {
+      section.classList.add("your-active-class");
+      activeLink.classList.add("active-link");
+    } else {
+      section.classList.remove("your-active-class");
+      activeLink.classList.remove("active-link");
+    }
+  });
+}
 
 // Scroll to section on link click
 function scroll(e) {
@@ -82,10 +95,6 @@ function scroll(e) {
   }
 }
 
-navList.addEventListener("click", scroll);
-
-// Set sections as active
-
 function validateForm() {
   var x = document.myform.email.value;
   var name = document.myform.name.value;
@@ -96,16 +105,14 @@ function validateForm() {
     dotposition < atposition + 2 ||
     dotposition + 2 >= x.length
   ) {
-    alert(
-      "Please enter a valid e-mail address"
-      //   "Please enter a valid e-mail address \n atpostion:" +
-      //     atposition +
-      //     "\n dotposition:" +
-      //     dotposition
-    );
+    alert("Please enter a valid e-mail address");
     return false;
   } else {
     alert("Congratulations " + name + "!" + "email address successfully!");
     return true;
   }
 }
+
+document.addEventListener("DOMContentLoaded", buildNav);
+document.addEventListener("scroll", setActive);
+navList.addEventListener("click", scroll);
