@@ -2,7 +2,31 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+- [Instructions](#instructions)
+
+# Landing Page
+
+## A Masterschool/Udacity Project
+
+### Description
+
+This project is about creating an interactive web page with focus on  
+having classes set to active when inside the viewport. The nav menu  
+is also done by Javascript.
+
+### Requirements
+
+A modern browser.
+
+### Contents
+
+index.html, css/styles.css, js/app.js and this README file.
+
+### Credits
+
+Many thanks to endless videos about Javascript on udemy  
+, youtube and the MDN Ressources as well as input  
+from Masterschool instructors and fellow students :)
 
 ## Instructions
 
