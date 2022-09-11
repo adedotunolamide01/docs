@@ -14,6 +14,9 @@ This project is about creating an interactive web page with focus on
 having classes set to active when inside the viewport. The nav menu  
 is also done by Javascript.
 
+This is a landing page project. I learnt how to use javascript with scroll functions
+and validation of forms are my key take away in this sections.
+
 ### Requirements
 
 A modern browser.
